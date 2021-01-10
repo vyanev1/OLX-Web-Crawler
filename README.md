@@ -22,3 +22,5 @@ It returns a .json file that contains objects for item listings in the following
   "url": "https://www.olx.bg/ad/samsung-j4-perfektno-sastoyanie-CID632-ID8q8fz.html"
 }
 ```
+
+The extracted data can then be used to perform statistics and extract useful information
