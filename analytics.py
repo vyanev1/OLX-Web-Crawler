@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import csv
 
 # identify last csv file in directory
 path = os.path.join(os.getcwd(), 'olx', 'data', 'electronics')
@@ -33,6 +34,12 @@ for phone in mean_prices:
     cheap_listings = listings[listings['price'] < mean_prices[phone]]
     bargains = bargains.append(cheap_listings, ignore_index=True)
 
-print(bargains.describe())
+print(bargains.head())
 
 bargains.to_csv(os.path.join(path, 'bargains', last_csv[:-4]+'_cheap.csv'), index=False)
+
+mean_csv = [{'model': key, 'mean_price': value} for key, value in mean_prices.items()]
+with open(os.path.join(path, 'mean_prices', f'mean_{last_csv[:-4]}.csv'), 'w', newline='') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=['model', 'mean_price'])
+    writer.writeheader()
+    writer.writerows(mean_csv)
