@@ -12,7 +12,7 @@ You can disable the debugger if you don’t want to see debugging information:
 scrapy crawl --nolog electronics
 ```
 # Output
-It returns a .json file that contains objects for item listings in the following format:
+It returns a .csv file that contains objects for item listings in the following format:
 ```yaml
 {
   "title": "SAMSUNG J4 Perfektno Sastoyanie", 
