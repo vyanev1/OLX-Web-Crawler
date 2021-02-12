@@ -1,5 +1,5 @@
 # OLX Web Crawler
-A web crawler that scrapes smartphone listings data from OLX.bg (a popular buy and sell website in Bulgaria).
+A web crawler that scrapes smartphone listings data from OLX.bg (a popular buy and sell marketplace website in Bulgaria), keeps track of the mean price for certain models and saves a csv file of those which are posted with an unusually low price. 
 
 # Instructions
 Go to your Terminal, in your project directory and type:
