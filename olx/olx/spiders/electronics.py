@@ -35,7 +35,7 @@ class ElectronicsSpider(CrawlSpider):
         print('Details page..' + response.url)
         item = OlxItem()
         item['title'] = format_text(response.css('h1::text').extract()[0].strip())
-        item['price'] = format_text(response.css('.pricelabel > strong::text').extract()[0])
+        item['price'] = float(response.css('.pricelabel > strong::text').extract()[0][:-3])
         item['location'] = format_text(response.css('.offer-user__address > address > p::text').extract()[0])
         item['condition'] = format_text(response.css('.offer-details__value::text').extract()[-1])
         item['url'] = response.url

@@ -1,0 +1,3 @@
+iphone 6,iphone 6s,iphone 7,iphone 7 plus,iphone 8,iphone 8 plus,iphone X,iphone XS,iphone 11,iphone 12,title,price
+228.372549,232.6428571,314,442.375,506.0606061,581.6666667,731.1865672,852.5192308,1258.083333,1833,*iphone 6*,>228.3725
+SELECT * WHERE ITEM.PRICE < ITEM.AVG_PRICE,,,,,,,,,,,
